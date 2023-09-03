@@ -1,12 +1,12 @@
 <template>
   <the-header></the-header>
-  <router-view/>
+  <router-view />
   <the-footer></the-footer>
 </template>
 
 <script>
 import TheFooter from './components/TheFooter.vue';
-import TheHeader from './components/TheHeader.vue';
+import TheHeader from './components/TheHeader.vue'; ` `
 
 export default {
   components: {
@@ -16,5 +16,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

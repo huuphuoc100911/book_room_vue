@@ -4,6 +4,7 @@ import Blog from "../views/Blog.vue";
 import Room from "../views/Room.vue";
 import RoomDetail from "../views/RoomDetail.vue";
 import Contact from "../views/Contact.vue";
+import Auth from "../views/Auth.vue";
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: "/contact",
     name: "ContactView",
     component: Contact,
+  },
+  {
+    path: "/auth",
+    name: "LoginRegister",
+    component: Auth,
   },
 ];
 
