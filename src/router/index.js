@@ -34,7 +34,7 @@ const routes = [
   },
   {
     path: "/auth",
-    name: "LoginRegister",
+    name: "AuthView",
     component: Auth,
   },
 ];

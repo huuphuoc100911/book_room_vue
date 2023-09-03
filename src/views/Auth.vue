@@ -10,12 +10,12 @@
                     <!--Tabs -->
                     <div class="sign-in-form style-1">
                         <ul class="tabs-nav">
-                            <li class=""><a href="#tab1">Log In</a></li>
+                            <li class="active"><a href="#tab1">Log In</a></li>
                             <li class=""><a href="#tab2">Register</a></li>
                         </ul>
                         <div class="tabs-container alt">
                             <!-- Login -->
-                            <div class="tab-content" id="tab1" style="display: none;">
+                            <div class="tab-content" id="tab1" style="">
                                 <form method="post" class="login">
                                     <p class="form-row form-row-wide">
                                         <label for="username">Username:
@@ -42,7 +42,7 @@
                                 </form>
                             </div>
                             <!-- Register -->
-                            <div class="tab-content" id="tab2" style="">
+                            <div class="tab-content" id="tab2" style="display: none;">
                                 <form method="post" class="register">
                                     <p class="form-row form-row-wide">
                                         <label for="username2">Username:
@@ -83,7 +83,7 @@
 
 <script>
 export default {
-    name: "LoginRegister"
+    name: "AuthView"
 }
 </script>
 
