@@ -9,16 +9,17 @@
                     <!-- Titlebar -->
                     <div id="titlebar" class="listing-titlebar">
                         <div class="listing-titlebar-title">
-                            <h2>Sunny and Modern Apartment<span class="listing-tag">Apartments</span></h2>
+                            <h2>{{ roomDetail.name }}<span class="listing-tag">Apartments</span></h2>
                             <span>
-                                <a href="#listing-location" class="listing-address">
+                                <div class="listing-address" v-if="roomDetail.locationId">
                                     <i class="fa fa-map-marker"></i>
-                                    2726 Shinn Street, New York
-                                </a>
+                                    {{ roomDetail.locationId.province }}, {{ roomDetail.locationId.country }}
+                                </div>
                             </span>
                             <div class="star-rating" data-rating="5">
                                 <div class="rating-counter"><a href="#listing-reviews">(31 reviews)</a></div>
                             </div>
+                            <img v-if="roomDetail.locationId" :src="roomDetail.locationId.image" />
                         </div>
                     </div>
 
@@ -38,28 +39,13 @@
 
                         <!-- Apartment Description -->
                         <ul class="apartment-details">
-                            <li>2 rooms</li>
-                            <li>1 bedroom</li>
-                            <li>1 bed</li>
-                            <li>1 bathroom</li>
+                            <li>{{ roomDetail.guests }} guest</li>
+                            <li>{{ roomDetail.bedRoom }} bedroom</li>
+                            <li>{{ roomDetail.bath }} bathroom</li>
                         </ul>
 
                         <!-- Description -->
-                        <p>
-                            Ut euismod ultricies sollicitudin. Curabitur sed dapibus nulla. Nulla eget iaculis lectus.
-                            Mauris ac maximus neque. Nam in mauris quis libero sodales eleifend. Morbi varius, nulla sit
-                            amet rutrum elementum, est elit finibus tellus, ut tristique elit risus at metus.
-                        </p>
-
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla
-                            finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus
-                            suscipit, et pulvinar nisi tincidunt. Aliquam erat volutpat. Curabitur convallis fringilla diam
-                            sed aliquam. Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa, a
-                            consequat purus viverra.
-                        </p>
-
-
+                        <p>{{ roomDetail.description }}</p>
                         <!-- Listing Contacts -->
                         <div class="listing-links-container">
 
@@ -102,26 +88,17 @@
                     <!-- Slider -->
                     <div id="listing-gallery" class="listing-section">
                         <h3 class="listing-desc-headline margin-top-70">Gallery</h3>
-                        <div class="listing-slider-small mfp-gallery-container margin-bottom-0">
-                            <a href="images/single-listing-02a.jpg" data-background-image="images/single-listing-02a.jpg"
-                                class="item mfp-gallery" title="Title 2"></a>
-                            <a href="images/single-listing-01a.jpg" data-background-image="images/single-listing-01a.jpg"
-                                class="item mfp-gallery" title="Title 1"></a>
-                            <a href="images/single-listing-03a.jpg" data-background-image="images/single-listing-03a.jpg"
-                                class="item mfp-gallery" title="Title 3"></a>
-                            <a href="images/single-listing-04a.jpg" data-background-image="images/single-listing-04a.jpg"
-                                class="item mfp-gallery" title="Title 3"></a>
-                        </div>
+                        <img :src="roomDetail.image" />
                     </div>
 
                     <!-- Location -->
                     <div id="listing-location" class="listing-section">
                         <h3 class="listing-desc-headline margin-top-60 margin-bottom-30">Location</h3>
-
-                        <div id="singleListingMap-container">
-                            <div id="singleListingMap" data-latitude="40.70437865245596" data-longitude="-73.98674011230469"
-                                data-map-icon="im im-icon-Hamburger"></div>
-                            <a href="#" id="streetView">Street View</a>
+                        <div id="map-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248998.6495037926!2d108.38236978848849!3d12.804203490722648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3171d93149ba9fcd%3A0xc092d39e5e42601d!2zRWEgS2FyLCDEkOG6r2sgTOG6r2ssIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1693898195033!5m2!1svi!2s"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
 
@@ -186,57 +163,23 @@
                         <!-- Reviews -->
                         <section class="comments listing-reviews">
                             <ul>
-                                <li>
-                                    <div class="avatar"><img
-                                            src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70"
-                                            alt="" /></div>
+                                <li v-for="(review, index) in reviewList" :key="index">
+                                    <div class="avatar">
+                                        <img :src="review.userId.avatar" alt="" />
+                                    </div>
                                     <div class="comment-content">
                                         <div class="arrow-comment"></div>
-                                        <div class="comment-by">Kathy Brown <i class="tip"
+                                        <div class="comment-by">{{ review.userId.name }}
+                                            <i class="tip" v-if="review.userId.type === 'ADMIN'"
                                                 data-tip-content="Person who left this review actually was a customer"></i>
-                                            <span class="date">June 2019</span>
+                                            <span class="date">{{ review.updatedAt.slice(0, 10) }}</span>
                                             <div class="star-rating" data-rating="5"></div>
                                         </div>
-                                        <p>Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere
-                                            tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque non
-                                            metus</p>
-                                        <a href="#" class="rate-review"><i class="sl sl-icon-like"></i> Helpful Review
+                                        <p>{{ review.content }}</p>
+                                        <a href="#" class="rate-review"><i class="sl sl-icon-like"></i>
+                                            {{ review.userId.type }}
                                             <span>12</span></a>
                                     </div>
-                                </li>
-
-                                <li>
-                                    <div class="avatar"><img
-                                            src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70"
-                                            alt="" /> </div>
-                                    <div class="comment-content">
-                                        <div class="arrow-comment"></div>
-                                        <div class="comment-by">John Doe<span class="date">May 2019</span>
-                                            <div class="star-rating" data-rating="4"></div>
-                                        </div>
-                                        <p>Commodo est luctus eget. Proin in nunc laoreet justo volutpat blandit enim. Sem
-                                            felis, ullamcorper vel aliquam non, varius eget justo. Duis quis nunc tellus
-                                            sollicitudin mauris.</p>
-                                        <a href="#" class="rate-review"><i class="sl sl-icon-like"></i> Helpful Review
-                                            <span>2</span></a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="avatar"><img
-                                            src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70"
-                                            alt="" /> </div>
-                                    <div class="comment-content">
-                                        <div class="arrow-comment"></div>
-                                        <div class="comment-by">John Doe<span class="date">May 2019</span>
-                                            <div class="star-rating" data-rating="5"></div>
-                                        </div>
-                                        <p>Commodo est luctus eget. Proin in nunc laoreet justo volutpat blandit enim. Sem
-                                            felis, ullamcorper vel aliquam non, varius eget justo. Duis quis nunc tellus
-                                            sollicitudin mauris.</p>
-                                        <a href="#" class="rate-review"><i class="sl sl-icon-like"></i> Helpful Review</a>
-                                    </div>
-
                                 </li>
                             </ul>
                         </section>
@@ -510,8 +453,23 @@
 </template>
 
 <script>
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+import { useStore } from 'vuex';
 export default {
+    setup() {
+        const route = useRoute();
+        const store = useStore();
+        store.dispatch("rooms/getRoomDetailAction", route.params.roomId);
+        store.dispatch("rooms/getReviewRoomAction", route.params.roomId);
+        const roomDetail = computed(() => store.state.rooms.roomDetail);
+        const reviewList = computed(() => store.state.rooms.reviewList);
 
+        return {
+            roomDetail,
+            reviewList
+        }
+    }
 }
 </script>
 
