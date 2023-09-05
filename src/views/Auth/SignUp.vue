@@ -16,13 +16,13 @@
                                     <p class="form-row form-row-wide">
                                         <label for="username2">Username:
                                             <i class="im im-icon-Male"></i>
-                                            <input type="text" class="input-text" name="username" id="username2" value="">
+                                            <input type="text" class="input-text" name="username" id="username2">
                                         </label>
                                     </p>
                                     <p class="form-row form-row-wide">
                                         <label for="email2">Email Address:
                                             <i class="im im-icon-Mail"></i>
-                                            <input type="text" class="input-text" name="email" id="email2" value="">
+                                            <input type="text" class="input-text" name="email" id="email2">
                                         </label>
                                     </p>
                                     <p class="form-row form-row-wide">
@@ -37,6 +37,48 @@
                                             <input class="input-text" type="password" name="password2" id="password2">
                                         </label>
                                     </p>
+                                    <p class="form-row form-row-wide">
+                                        <label for="phone">Phone:
+                                            <i class="im im-icon-Phone-2"></i>
+                                            <input type="text" class="input-text" name="phone" id="phone">
+                                        </label>
+                                    </p>
+                                    <p class="form-row form-row-wide">
+                                        <label for="phone">Birthday:
+                                            <div class="row" style="margin-left: 0;">
+                                                <select class="col-sm-3" style="margin-right: 20px;" name="" id="">
+                                                    <option label="year">Year</option>
+                                                    <option v-for="(year, index) in arrayYear" :key="index">{{ year }}
+                                                    </option>
+                                                </select>
+                                                <select class="col-sm-3" style="margin-right: 20px;" name="" id="">
+                                                    <option label="Month">Month</option>
+                                                    <option v-for="(month, index) in arrayMonth" :key="index">{{ month }}
+                                                    </option>
+                                                </select>
+                                                <select class="col-sm-3" style="margin-right: 20px;" name="" id="">
+                                                    <option label="Day">Day</option>
+                                                    <option v-for="(day, index) in arrayDay" :key="index">{{ day }}
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </label>
+                                    </p>
+                                    <p class="form-row form-row-wide">
+                                        <label for="gender">Gender:
+                                            <select class="" style="margin-right: 20px;" name="" id="">
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                            </select>
+                                        </label>
+                                    </p>
+                                    <p class="form-row form-row-wide">
+                                        <label for="address">Address:
+                                            <i class="im im-icon-Location-2"></i>
+                                            <input type="text" class="input-text" name="address" id="address">
+                                        </label>
+                                    </p>
+
                                     <input type="submit" class="button border fw margin-top-10" name="register"
                                         value="Register">
                                 </form>
@@ -50,8 +92,20 @@
 </template>
 
 <script>
+import { createArrayNumber } from "../../utils/createArrayNumber";
 export default {
-    name: "SignUp"
+    name: "SignUp",
+    setup() {
+        const arrayYear = createArrayNumber(1970, 2023);
+        const arrayMonth = createArrayNumber(1, 12);
+        const arrayDay = createArrayNumber(1, 31);
+
+        return {
+            arrayYear,
+            arrayMonth,
+            arrayDay
+        }
+    }
 }
 </script>
 
@@ -61,5 +115,6 @@ export default {
     top: 0px;
     position: absolute;
     height: 100vh;
+    overflow: scroll;
 }
 </style>
