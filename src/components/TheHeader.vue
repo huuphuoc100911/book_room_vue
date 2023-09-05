@@ -42,8 +42,11 @@
                 <!-- Right Side Content / End -->
                 <div class="right-side">
                     <div class="header-widget">
-                        <router-link class="sign-in" :to="{ name: 'AuthView' }">
-                            <i class="sl sl-icon-login"></i> Sign In
+                        <router-link class="sign-in" :to="{ name: 'SignIn' }">
+                            <i class="sl sl-icon-login"></i>Sign In
+                        </router-link>
+                        <router-link class="sign-in" :to="{ name: 'SignUp' }">
+                            <i class="sl sl-icon-user-follow"></i>Sign Up
                         </router-link>
                         <!-- User Menu -->
                         <div class="user-menu">
