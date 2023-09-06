@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import Blog from "../views/Blog.vue";
 import Room from "../views/Room.vue";
 import RoomDetail from "../views/RoomDetail.vue";
+import Booking from "../views/Booking.vue";
 import Contact from "../views/Contact.vue";
 import SignIn from "../views/Auth/SignIn.vue";
 import SignUp from "../views/Auth/SignUp.vue";
@@ -27,6 +28,11 @@ const routes = [
     path: "/room-detail/:roomId",
     name: "RoomDetail",
     component: RoomDetail,
+  },
+  {
+    path: "/booking/:roomId",
+    name: "BookingView",
+    component: Booking,
   },
   {
     path: "/contact",

@@ -11,3 +11,12 @@ export const getRoomDetailAPI = (roomId) => {
 export const getReviewRoomAPI = (roomId) => {
   return axiosAPI.get(`/api/reviews/byRoom?roomId=${roomId}`);
 };
+
+export const bookingRoomAPi = (data) => {
+  const { token } = JSON.parse(localStorage.getItem("userLogin"));
+  return axiosAPI.post(`/api/rooms/booking`, data, {
+    headers: {
+      token,
+    },
+  });
+};

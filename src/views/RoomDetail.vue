@@ -19,7 +19,7 @@
                             <div class="star-rating" data-rating="5">
                                 <div class="rating-counter"><a href="#listing-reviews">(31 reviews)</a></div>
                             </div>
-                            <img v-if="roomDetail.locationId" :src="roomDetail.locationId.image" />
+                            <img :src="roomDetail.image" />
                         </div>
                     </div>
 
@@ -339,8 +339,7 @@
                     </div>
                     <!-- Add Review Box / End -->
                 </div>
-                <!-- Sidebar
-		================================================== -->
+                <!-- Sidebar -->
                 <div class="col-lg-4 col-md-4 margin-top-75 sticky">
                     <!-- Verified Badge -->
                     <div class="verified-badge with-tip"
@@ -375,7 +374,9 @@
                             <!-- Panel Dropdown / End -->
                         </div>
                         <!-- Book Now -->
-                        <a href="pages-booking.html" class="button book-now fullwidth margin-top-5">Request To Book</a>
+                        <router-link :to="`/booking/${roomDetail._id}`"
+                            class="button book-now fullwidth margin-top-5">Request To
+                            Book</router-link>
                     </div>
                     <!-- Book Now / End -->
 

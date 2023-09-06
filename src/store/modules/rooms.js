@@ -1,4 +1,5 @@
 import {
+  bookingRoomAPi,
   getReviewRoomAPI,
   getRoomDetailAPI,
   getRoomListByLocationAPI,
@@ -36,6 +37,11 @@ const actions = {
   async getReviewRoomAction({ commit }, payload) {
     const reviewList = await getReviewRoomAPI(payload);
     commit("setReviewRoomMutation", reviewList);
+  },
+  async bookingRoomAction({ commit }, payload) {
+    const res = await bookingRoomAPi(payload);
+    console.log(res);
+    console.log(commit);
   },
 };
 
