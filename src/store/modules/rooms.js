@@ -38,9 +38,9 @@ const actions = {
     const reviewList = await getReviewRoomAPI(payload);
     commit("setReviewRoomMutation", reviewList);
   },
-  async bookingRoomAction({ commit }, payload) {
-    const res = await bookingRoomAPi(payload);
-    console.log(res);
+  async bookingRoomAction({ commit }, { data, router }) {
+    const { userDetail } = await bookingRoomAPi(data);
+    router.push(`/user-profile/${userDetail._id}`);
     console.log(commit);
   },
 };

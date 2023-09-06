@@ -49,7 +49,9 @@
                             </div>
                             <ul>
                                 <li>
-                                    <a href="dashboard.html"><i class="sl sl-icon-settings"></i> Dashboard</a>
+                                    <router-link :to="`/user-profile/${userLogin.user._id}`">
+                                        <i class="sl sl-icon-settings"></i> Profile
+                                    </router-link>
                                 </li>
                                 <li>
                                     <a href="dashboard-messages.html"><i class="sl sl-icon-envelope-open"></i> Messages</a>
@@ -57,8 +59,8 @@
                                 <li>
                                     <a href="dashboard-bookings.html"><i class="fa fa-calendar-check-o"></i> Bookings</a>
                                 </li>
-                                <li>
-                                    <a href="index.html"><i class="sl sl-icon-power"></i> Logout</a>
+                                <li @click="handleLogout">
+                                    <span><i class="sl sl-icon-power"></i> Logout</span>
                                 </li>
                             </ul>
                         </div>
@@ -88,12 +90,25 @@ export default {
     setup() {
         const store = useStore();
         const userLogin = computed(() => store.state.auth.userLogin);
+        function handleLogout() {
+            localStorage.removeItem("userLogin");
+            store.dispatch("auth/loadUserLoginFromLocalStorageAction");
+        }
 
         return {
-            userLogin
+            userLogin,
+            handleLogout
         }
     }
 }
 </script>
 
-<style></style>
+<style lang="scss">
+.user-menu ul li span {
+    padding: 6px 15px;
+    line-height: 22px;
+    display: inline-block;
+    color: #696969;
+    transition: 0.2s;
+}
+</style>

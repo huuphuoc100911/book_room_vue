@@ -165,18 +165,24 @@
                             <ul>
                                 <li v-for="(review, index) in reviewList" :key="index">
                                     <div class="avatar">
-                                        <img :src="review.userId.avatar" alt="" />
+                                        <div v-if="review.userId">
+                                            <img v-if="review.userId.avatar" :src="review.userId.avatar" alt="" />
+                                            <img v-else src="/images/user-avatar.jpg" alt="" />
+                                        </div>
+                                        <div v-else>
+                                            <img src="/images/user-avatar.jpg" alt="" />
+                                        </div>
                                     </div>
                                     <div class="comment-content">
                                         <div class="arrow-comment"></div>
-                                        <div class="comment-by">{{ review.userId.name }}
+                                        <div class="comment-by" v-if="review.userId">{{ review.userId.name }}
                                             <i class="tip" v-if="review.userId.type === 'ADMIN'"
                                                 data-tip-content="Person who left this review actually was a customer"></i>
                                             <span class="date">{{ review.updatedAt.slice(0, 10) }}</span>
                                             <div class="star-rating" data-rating="5"></div>
                                         </div>
                                         <p>{{ review.content }}</p>
-                                        <a href="#" class="rate-review"><i class="sl sl-icon-like"></i>
+                                        <a href="#" class="rate-review" v-if="review.userId"><i class="sl sl-icon-like"></i>
                                             {{ review.userId.type }}
                                             <span>12</span></a>
                                     </div>

@@ -145,7 +145,7 @@
 
 <script>
 import { computed, reactive } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import { useStore } from 'vuex';
 
 export default {
@@ -153,6 +153,7 @@ export default {
     setup() {
         const store = useStore();
         const route = useRoute();
+        const router = useRouter();
         const timeCheck = reactive({
             checkIn: "",
             checkOut: ""
@@ -165,8 +166,7 @@ export default {
                 checkIn: timeCheck.checkIn,
                 checkOut: timeCheck.checkOut,
             }
-            store.dispatch("rooms/bookingRoomAction", data);
-            console.log(data);
+            store.dispatch("rooms/bookingRoomAction", { data, router });
         }
 
         return {

@@ -1,6 +1,7 @@
 import { createStore } from "vuex";
 import location from "./modules/location";
 import rooms from "./modules/rooms";
+import ticket from "./modules/ticket";
 import auth from "./modules/auth";
 
 export default createStore({
@@ -11,6 +12,7 @@ export default createStore({
   modules: {
     location,
     rooms,
+    ticket,
     auth,
   },
 });

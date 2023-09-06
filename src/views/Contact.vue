@@ -89,8 +89,13 @@
 </template>
 
 <script>
+import { useStore } from 'vuex';
 export default {
-    name: "ContactView"
+    name: "ContactView",
+    setup() {
+        const store = useStore();
+        store.dispatch("auth/loadUserLoginFromLocalStorageAction");
+    }
 }
 </script>
 

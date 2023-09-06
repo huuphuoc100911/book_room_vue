@@ -10,12 +10,17 @@
 <script>
 import TheTitleBar from '@/components/TheTitleBar.vue';
 import TheContentBlog from '@/components/TheContentBlog.vue';
+import { useStore } from 'vuex';
 export default {
+    name: "BlogView",
     components: {
         TheTitleBar,
         TheContentBlog
     },
-    name: "BlogView",
+    setup() {
+        const store = useStore();
+        store.dispatch("auth/loadUserLoginFromLocalStorageAction");
+    }
 }
 </script>
 
