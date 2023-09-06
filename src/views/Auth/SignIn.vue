@@ -12,17 +12,18 @@
                         <div class="tabs-container alt">
                             <!-- Login -->
                             <div>
-                                <form method="post" class="login">
+                                <form method="post" class="login" @submit.prevent="handleLogin()">
                                     <p class="form-row form-row-wide">
-                                        <label for="username">Username:
-                                            <i class="im im-icon-Male"></i>
-                                            <input type="text" class="input-text" name="username" id="username" value="">
+                                        <label for="username">Email:
+                                            <i class="im im-icon-Mail"></i>
+                                            <input type="text" class="input-text" v-model="userLogin.email" id="username">
                                         </label>
                                     </p>
                                     <p class="form-row form-row-wide">
                                         <label for="password">Password:
                                             <i class="im im-icon-Lock-2"></i>
-                                            <input class="input-text" type="password" name="password" id="password">
+                                            <input class="input-text" type="password" v-model="userLogin.password"
+                                                id="password">
                                         </label>
                                         <span class="lost_password">
                                             <a href="#">Lost Your Password?</a>
@@ -46,8 +47,28 @@
 </template>
 
 <script>
+import { reactive } from 'vue'
+import { useStore } from 'vuex';
+import { useRouter } from 'vue-router';
 export default {
-    name: "SignIn"
+    name: "SignIn",
+    setup() {
+        const userLogin = reactive({
+            email: "",
+            password: ""
+        });
+        const store = useStore();
+        const router = useRouter();
+
+        function handleLogin() {
+            store.dispatch("auth/signInAction", { data: userLogin, router })
+        }
+
+        return {
+            userLogin,
+            handleLogin
+        }
+    }
 }
 </script>
 
