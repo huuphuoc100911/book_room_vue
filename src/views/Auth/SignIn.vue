@@ -12,7 +12,7 @@
                         <div class="tabs-container alt">
                             <!-- Login -->
                             <div>
-                                <form method="post" class="login" @submit.prevent="handleLogin()">
+                                <form class="login" @submit.prevent="handleLogin()">
                                     <p class="form-row form-row-wide">
                                         <label for="username">Email:
                                             <i class="im im-icon-Mail"></i>
