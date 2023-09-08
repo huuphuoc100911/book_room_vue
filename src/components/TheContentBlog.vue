@@ -7,64 +7,64 @@
                     <!-- Blog Post -->
                     <div class="blog-post">
                         <!-- Img -->
-                        <a href="pages-blog-post.html" class="post-img">
+                        <a class="post-img">
                             <img src="images/blog-post-01.jpg" alt="">
                         </a>
                         <!-- Content -->
                         <div class="post-content">
-                            <h3><a href="pages-blog-post.html">Hotels for All Budgets </a></h3>
+                            <h3><a>Hotels for All Budgets </a></h3>
                             <ul class="post-meta">
                                 <li>August 22, 2019</li>
-                                <li><a href="#">Tips</a></li>
-                                <li><a href="#">5 Comments</a></li>
+                                <li><a>Tips</a></li>
+                                <li><a>5 Comments</a></li>
                             </ul>
                             <p>Nam nisl lacus, dignissim ac tristique ut, scelerisque eu massa. Vestibulum ligula nunc,
                                 rutrum in malesuada vitae, tempus sed augue. Curabitur quis lectus quis augue dapibus
                                 facilisis.</p>
-                            <a href="pages-blog-post.html" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
+                            <a class="read-more">Read More <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                     <!-- Blog Post / End -->
                     <!-- Blog Post -->
                     <div class="blog-post">
                         <!-- Img -->
-                        <a href="pages-blog-post.html" class="post-img">
+                        <a class="post-img">
                             <img src="images/blog-post-02.jpg" alt="">
                         </a>
                         <!-- Content -->
                         <div class="post-content">
-                            <h3><a href="pages-blog-post.html">The 50 Greatest Street Arts In London</a></h3>
+                            <h3><a>The 50 Greatest Street Arts In London</a></h3>
                             <ul class="post-meta">
                                 <li>August 18, 2019</li>
-                                <li><a href="#">Tips</a></li>
-                                <li><a href="#">7 Comments</a></li>
+                                <li><a>Tips</a></li>
+                                <li><a>7 Comments</a></li>
                             </ul>
                             <p>Nam nisl lacus, dignissim ac tristique ut, scelerisque eu massa. Vestibulum ligula nunc,
                                 rutrum in malesuada vitae, tempus sed augue. Curabitur quis lectus quis augue dapibus
                                 facilisis.</p>
-                            <a href="pages-blog-post.html" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
+                            <a class="read-more">Read More <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                     <!-- Blog Post / End -->
                     <!-- Blog Post -->
                     <div class="blog-post">
                         <!-- Img -->
-                        <a href="pages-pages-blog-post.html" class="post-img">
+                        <a class="post-img">
                             <img src="images/blog-post-03.jpg" alt="">
                         </a>
                         <!-- Content -->
                         <div class="post-content">
-                            <h3><a href="pages-pages-blog-post.html">The Best Cofee Shops In Sydney Neighborhoods</a>
+                            <h3><a>The Best Cofee Shops In Sydney Neighborhoods</a>
                             </h3>
                             <ul class="post-meta">
                                 <li>August 10, 2019</li>
-                                <li><a href="#">Tips</a></li>
-                                <li><a href="#">12 Comments</a></li>
+                                <li><a>Tips</a></li>
+                                <li><a>12 Comments</a></li>
                             </ul>
                             <p>Nam nisl lacus, dignissim ac tristique ut, scelerisque eu massa. Vestibulum ligula nunc,
                                 rutrum in malesuada vitae, tempus sed augue. Curabitur quis lectus quis augue dapibus
                                 facilisis.</p>
-                            <a href="pages-blog-post.html" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
+                            <a class="read-more">Read More <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                     <!-- Blog Post / End -->
@@ -76,10 +76,10 @@
                             <div class="pagination-container margin-bottom-40">
                                 <nav class="pagination">
                                     <ul>
-                                        <li><a href="#" class="current-page">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#"><i class="sl sl-icon-arrow-right"></i></a></li>
+                                        <li><a class="current-page">1</a></li>
+                                        <li><a>2</a></li>
+                                        <li><a>3</a></li>
+                                        <li><a><i class="sl sl-icon-arrow-right"></i></a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -106,8 +106,8 @@
                             <h3>Got any questions?</h3>
                             <div class="info-box margin-bottom-10">
                                 <p>Having any questions? Feel free to ask!</p>
-                                <a href="pages-contact.html" class="button fullwidth margin-top-20"><i
-                                        class="fa fa-envelope-o"></i> Drop Us a Line</a>
+                                <a class="button fullwidth margin-top-20"><i class="fa fa-envelope-o"></i> Drop Us a
+                                    Line</a>
                             </div>
                         </div>
                         <!-- Widget / End -->
@@ -119,10 +119,10 @@
                                 <li>
                                     <div class="widget-content">
                                         <div class="widget-thumb">
-                                            <a href="pages-blog-post.html"><img src="images/blog-widget-03.jpg" alt=""></a>
+                                            <a><img src="images/blog-widget-03.jpg" alt=""></a>
                                         </div>
                                         <div class="widget-text">
-                                            <h5><a href="pages-blog-post.html">Hotels for All Budgets </a></h5>
+                                            <h5><a>Hotels for All Budgets </a></h5>
                                             <span>October 26, 2016</span>
                                         </div>
                                         <div class="clearfix"></div>
@@ -132,11 +132,11 @@
                                 <li>
                                     <div class="widget-content">
                                         <div class="widget-thumb">
-                                            <a href="pages-blog-post.html"><img src="images/blog-widget-02.jpg" alt=""></a>
+                                            <a><img src="images/blog-widget-02.jpg" alt=""></a>
                                         </div>
 
                                         <div class="widget-text">
-                                            <h5><a href="pages-blog-post.html">The 50 Greatest Street Arts In London</a>
+                                            <h5><a>The 50 Greatest Street Arts In London</a>
                                             </h5>
                                             <span>November 9, 2016</span>
                                         </div>
@@ -147,11 +147,11 @@
                                 <li>
                                     <div class="widget-content">
                                         <div class="widget-thumb">
-                                            <a href="pages-blog-post.html"><img src="images/blog-widget-01.jpg" alt=""></a>
+                                            <a><img src="images/blog-widget-01.jpg" alt=""></a>
                                         </div>
 
                                         <div class="widget-text">
-                                            <h5><a href="pages-blog-post.html">The Best Cofee Shops In Sydney
+                                            <h5><a>The Best Cofee Shops In Sydney
                                                     Neighborhoods</a></h5>
                                             <span>November 12, 2016</span>
                                         </div>
@@ -166,10 +166,10 @@
                         <div class="widget margin-top-40">
                             <h3 class="margin-bottom-25">Social</h3>
                             <ul class="social-icons rounded">
-                                <li><a class="facebook" href="#"><i class="icon-facebook"></i></a></li>
-                                <li><a class="twitter" href="#"><i class="icon-twitter"></i></a></li>
-                                <li><a class="gplus" href="#"><i class="icon-gplus"></i></a></li>
-                                <li><a class="linkedin" href="#"><i class="icon-linkedin"></i></a></li>
+                                <li><a class="facebook"><i class="icon-facebook"></i></a></li>
+                                <li><a class="twitter"><i class="icon-twitter"></i></a></li>
+                                <li><a class="gplus"><i class="icon-gplus"></i></a></li>
+                                <li><a class="linkedin"><i class="icon-linkedin"></i></a></li>
                             </ul>
 
                         </div>

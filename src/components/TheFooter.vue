@@ -16,20 +16,10 @@
                 <div class="col-md-4 col-sm-6">
                     <h4>Helpful Links</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Sign Up</a></li>
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="#">Add Listing</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-
-                    <ul class="footer-links">
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Our Partners</a></li>
-                        <li><a href="#">How It Works</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><router-link to="/sign-in">Login</router-link></li>
+                        <li><router-link to="/sign-up">Sign Up</router-link></li>
+                        <li><router-link to="/blog">Blog</router-link></li>
+                        <li><router-link to="/contact">Contact</router-link></li>
                     </ul>
                     <div class="clearfix"></div>
                 </div>

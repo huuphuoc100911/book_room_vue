@@ -12,7 +12,7 @@
             <div class="row">
                 <!-- Blog Post Item -->
                 <div class="col-md-4">
-                    <a href="pages-blog-post.html" class="blog-compact-item-container">
+                    <a class="blog-compact-item-container">
                         <div class="blog-compact-item">
                             <img src="images/blog-compact-post-01.jpg" alt="" />
                             <span class="blog-item-tag">Tips</span>
@@ -33,7 +33,7 @@
 
                 <!-- Blog Post Item -->
                 <div class="col-md-4">
-                    <a href="pages-blog-post.html" class="blog-compact-item-container">
+                    <a class="blog-compact-item-container">
                         <div class="blog-compact-item">
                             <img src="images/blog-compact-post-02.jpg" alt="" />
                             <span class="blog-item-tag">Tips</span>
@@ -54,7 +54,7 @@
 
                 <!-- Blog Post Item -->
                 <div class="col-md-4">
-                    <a href="pages-blog-post.html" class="blog-compact-item-container">
+                    <a class="blog-compact-item-container">
                         <div class="blog-compact-item">
                             <img src="images/blog-compact-post-03.jpg" alt="" />
                             <span class="blog-item-tag">Tips</span>
@@ -74,7 +74,7 @@
                 <!-- Blog post Item / End -->
 
                 <div class="col-md-12 centered-content">
-                    <a href="pages-blog.html" class="button border margin-top-10">View Blog</a>
+                    <a class="button border margin-top-10">View Blog</a>
                 </div>
             </div>
         </div>

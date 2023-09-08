@@ -8,7 +8,8 @@
                 <div class="left-side">
                     <!-- Logo -->
                     <div id="logo">
-                        <a href="index.html"><img src="images/logo2.png" data-sticky-logo="images/logo.png" alt="" /></a>
+                        <router-link to="/"><img src="images/logo2.png" data-sticky-logo="images/logo.png"
+                                alt="" /></router-link>
                     </div>
 
                     <!-- Mobile Navigation -->
@@ -52,12 +53,6 @@
                                     <router-link :to="`/user-profile/${userLogin.user._id}`">
                                         <i class="sl sl-icon-settings"></i> Profile
                                     </router-link>
-                                </li>
-                                <li>
-                                    <a href="dashboard-messages.html"><i class="sl sl-icon-envelope-open"></i> Messages</a>
-                                </li>
-                                <li>
-                                    <a href="dashboard-bookings.html"><i class="fa fa-calendar-check-o"></i> Bookings</a>
                                 </li>
                                 <li @click="handleLogout">
                                     <span><i class="sl sl-icon-power"></i> Logout</span>

@@ -7,7 +7,7 @@
                     <!-- Breadcrumbs -->
                     <nav id="breadcrumbs">
                         <ul>
-                            <li><a href="#">Home</a></li>
+                            <li>Home</li>
                             <li>Blog</li>
                         </ul>
                     </nav>

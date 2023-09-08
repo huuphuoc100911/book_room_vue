@@ -3,7 +3,7 @@
         <!-- Listing Item -->
         <div class="col-lg-12 col-md-12">
             <div v-for="(room, index) in listTicketByUser" :key="index" class="listing-item-container list-layout">
-                <a href="listings-single-page.html" class="listing-item">
+                <a class="listing-item">
                     <!-- Image -->
                     <div class="listing-item-image">
                         <img :src="room.image" alt="">

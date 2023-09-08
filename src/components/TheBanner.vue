@@ -24,25 +24,25 @@
 
                         <div class="highlighted-categories">
                             <!-- Box -->
-                            <a href="listings-list-with-sidebar.html" class="highlighted-category">
+                            <a class="highlighted-category">
                                 <i class="im im-icon-Home"></i>
                                 <h4>Apartments</h4>
                             </a>
 
                             <!-- Box -->
-                            <a href="listings-list-full-width.html" class="highlighted-category">
+                            <a class="highlighted-category">
                                 <i class="im im-icon-Hamburger"></i>
                                 <h4>Eat &amp; Drink</h4>
                             </a>
 
                             <!-- Box -->
-                            <a href="listings-half-screen-map-list.html" class="highlighted-category">
+                            <a class="highlighted-category">
                                 <i class="im im-icon-Electric-Guitar"></i>
                                 <h4>Events</h4>
                             </a>
 
                             <!-- Box -->
-                            <a href="listings-half-screen-map-list.html" class="highlighted-category">
+                            <a class="highlighted-category">
                                 <i class="im im-icon-Dumbbell"></i>
                                 <h4>Fitness</h4>
                             </a>
@@ -65,4 +65,4 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss"></style>

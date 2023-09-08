@@ -13,7 +13,7 @@
                     <div class="simple-slick-carousel dots-nav">
                         <!-- Listing Item -->
                         <div class="carousel-item">
-                            <a href="listings-single-page.html" class="listing-item-container">
+                            <a class="listing-item-container">
                                 <div class="listing-item">
                                     <img src="images/listing-item-01.jpg" alt="" />
 
@@ -35,7 +35,7 @@
 
                         <!-- Listing Item -->
                         <div class="carousel-item">
-                            <a href="listings-single-page.html" class="listing-item-container">
+                            <a class="listing-item-container">
                                 <div class="listing-item">
                                     <img src="images/listing-item-02.jpg" alt="" />
                                     <div class="listing-item-details">
@@ -59,7 +59,7 @@
 
                         <!-- Listing Item -->
                         <div class="carousel-item">
-                            <a href="listings-single-page.html" class="listing-item-container">
+                            <a class="listing-item-container">
                                 <div class="listing-item">
                                     <img src="images/listing-item-03.jpg" alt="" />
                                     <div class="listing-item-details">
@@ -83,7 +83,7 @@
 
                         <!-- Listing Item -->
                         <div class="carousel-item">
-                            <a href="listings-single-page.html" class="listing-item-container">
+                            <a class="listing-item-container">
                                 <div class="listing-item">
                                     <img src="images/listing-item-04.jpg" alt="" />
 
@@ -105,7 +105,7 @@
 
                         <!-- Listing Item -->
                         <div class="carousel-item">
-                            <a href="listings-single-page.html" class="listing-item-container">
+                            <a class="listing-item-container">
                                 <div class="listing-item">
                                     <img src="images/listing-item-05.jpg" alt="" />
                                     <div class="listing-item-content">
@@ -124,7 +124,7 @@
 
                         <!-- Listing Item -->
                         <div class="carousel-item">
-                            <a href="listings-single-page.html" class="listing-item-container">
+                            <a class="listing-item-container">
                                 <div class="listing-item">
                                     <img src="images/listing-item-06.jpg" alt="" />
 

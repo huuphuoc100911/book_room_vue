@@ -13,7 +13,7 @@
             </ul>
         </div>
 
-        <button class="button" onclick="window.location.href='listings-half-screen-map-list.html'">
+        <button class="button">
             Search
         </button>
     </div>

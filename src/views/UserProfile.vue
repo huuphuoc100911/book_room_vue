@@ -10,7 +10,7 @@
                             <div class="user-profile-name">
                                 <h2>{{ userLogin.user.name }}</h2>
                                 <div class="star-rating" data-rating="5">
-                                    <div class="rating-counter"><a href="#listing-reviews">(60 reviews)</a></div>
+                                    <div class="rating-counter"><a>(60 reviews)</a></div>
                                 </div>
                             </div>
                         </div>
@@ -23,7 +23,7 @@
             <div class="row sticky-wrapper">
                 <profile></profile>
                 <div class="col-lg-8 col-md-8 padding-left-30">
-                    <h3 class="margin-top-0 margin-bottom-40">Tom's Listings</h3>
+                    <h3 class="margin-top-0 margin-bottom-40">{{ userLogin.user.name }}'s Listings</h3>
                     <list-room-booking></list-room-booking>
                 </div>
             </div>

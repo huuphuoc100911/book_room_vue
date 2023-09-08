@@ -26,7 +26,7 @@
                                                 id="password">
                                         </label>
                                         <span class="lost_password">
-                                            <a href="#">Lost Your Password?</a>
+                                            <a>Lost Your Password?</a>
                                         </span>
                                     </p>
                                     <div class="form-row">
