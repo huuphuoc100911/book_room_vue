@@ -38,10 +38,15 @@ const actions = {
     const reviewList = await getReviewRoomAPI(payload);
     commit("setReviewRoomMutation", reviewList);
   },
-  async bookingRoomAction({ commit }, { data, router }) {
-    const { userDetail } = await bookingRoomAPi(data);
-    router.push(`/user-profile/${userDetail._id}`);
-    console.log(commit);
+  async bookingRoomAction({ commit }, { data, router, userLogin }) {
+    if (userLogin) {
+      const { userDetail } = await bookingRoomAPi(data);
+      router.push(`/user-profile/${userDetail._id}`);
+      console.log(commit);
+    } else {
+      alert("Bạn phải đăng nhập để đặt phòng");
+      router.push("/sign-in");
+    }
   },
 };
 

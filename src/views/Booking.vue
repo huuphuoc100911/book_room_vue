@@ -92,20 +92,24 @@ export default {
             checkOut: ""
         })
         store.dispatch("rooms/getRoomDetailAction", route.params.roomId);
+        store.dispatch("auth/loadUserLoginFromLocalStorageAction");
         const roomDetail = computed(() => store.state.rooms.roomDetail);
+        const userLogin = computed(() => store.state.auth.userLogin).value.user;
+
         function handleBooking() {
             const data = {
                 roomId: route.params.roomId,
                 checkIn: timeCheck.checkIn,
                 checkOut: timeCheck.checkOut,
             }
-            store.dispatch("rooms/bookingRoomAction", { data, router });
+            store.dispatch("rooms/bookingRoomAction", { data, router, userLogin });
         }
 
         return {
             roomDetail,
             handleBooking,
-            timeCheck
+            timeCheck,
+            userLogin
         }
     }
 }
